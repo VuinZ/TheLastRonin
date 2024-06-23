@@ -33,7 +33,12 @@ public class BossHealth : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        float finalTime = TImer.instance.GetElapsedTime();
+
+        PlayerPrefs.SetFloat("FinalTime", finalTime);
+        TImer.instance.ResetTimer();
         SceneManager.LoadScene("ScoreBoard");
+        
     }
 
 }
