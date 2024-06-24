@@ -7,7 +7,7 @@ public class BossHealth : MonoBehaviour
 {
 
     public int health = 10;
-
+    public GameObject canvastimer;
     
 
     public bool isInvulnerable = false;
@@ -37,6 +37,7 @@ public class BossHealth : MonoBehaviour
 
         PlayerPrefs.SetFloat("FinalTime", finalTime);
         TImer.instance.ResetTimer();
+        canvastimer.SetActive(false);
         SceneManager.LoadScene("ScoreBoard");
         
     }

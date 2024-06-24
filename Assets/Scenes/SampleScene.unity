@@ -4128,6 +4128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46a75c974a32f44b95470591cc0f9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvastimenbar: {fileID: 1383037421}
 --- !u!114 &322749916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48766,7 +48767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1383037422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49391,6 +49392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  canvastimer: {fileID: 1383037421}
   isInvulnerable: 0
 --- !u!114 &1460807884
 MonoBehaviour:
