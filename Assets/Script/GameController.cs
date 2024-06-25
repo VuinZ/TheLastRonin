@@ -6,8 +6,7 @@ public class GameController : MonoBehaviour
 {
     Vector2 checkpointPos;
     SpriteRenderer spriteRenderer;
-    private PlayerHealth health;
-    public GameObject canvastimenbar;
+    private PlayerHealth health; 
 
     private void Awake()
     {
@@ -18,7 +17,6 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         checkpointPos = transform.position;
-        canvastimenbar.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

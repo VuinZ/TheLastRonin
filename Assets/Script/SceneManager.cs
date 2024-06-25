@@ -7,7 +7,7 @@ public class SceneManagerer : MonoBehaviour
 {
     public void GameScene()
     {
-        
+
         SceneManager.LoadScene("SampleScene");
     }
 
@@ -19,6 +19,13 @@ public class SceneManagerer : MonoBehaviour
     public void MainLobbyScene()
     {
         SceneManager.LoadScene("Main Menu");
+    }
+
+    public void QuitApplication()
+    {
+        
+        Application.Quit();
+        Debug.Log("Quit application");
     }
 
 }

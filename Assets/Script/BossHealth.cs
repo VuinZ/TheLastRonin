@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour
 {
-
     public int health = 10;
-    public GameObject canvastimer;
-    
-
     public bool isInvulnerable = false;
+
+    // Menambahkan referensi ke skrip Timer
+    private Timer timer;
+
+    private void Start()
+    {
+        timer = FindObjectOfType<Timer>(); // Mencari objek Timer di scene
+    }
 
     public void TakeDamage(int damage)
     {
@@ -32,14 +36,10 @@ public class BossHealth : MonoBehaviour
 
     void Die()
     {
+        // Simpan waktu menggunakan PlayerPrefs
+        PlayerPrefs.SetFloat("FinalTime", timer.GetElapsedTime());
+
         Destroy(gameObject);
-        float finalTime = TImer.instance.GetElapsedTime();
-
-        PlayerPrefs.SetFloat("FinalTime", finalTime);
-        TImer.instance.ResetTimer();
-        canvastimer.SetActive(false);
         SceneManager.LoadScene("ScoreBoard");
-        
     }
-
 }
